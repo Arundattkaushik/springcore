@@ -14,6 +14,7 @@ xsi:schemaLocation="
 <context:annotation-config/>
 	
 	<bean class="com.spring.autowire.annotation.Employee" name="employee"/>
-	<bean class="com.spring.autowire.annotation.Address" name="address" p:street="Sector 62" p:city="NOida"/>
+	<bean class="com.spring.autowire.annotation.Address" name="address1" p:street="Sector 62" p:city="NOida"/>
+	<bean class="com.spring.autowire.annotation.Address" name="address2" p:street="Sector 59" p:city="Delhi"/>
 	
 </beans>
