@@ -1,0 +1,41 @@
+========================// Spring Core
+IoC:- It is a pre-defined program.
+It is responsible for creating objects 
+Injecting objects 
+Holding objects in the memory.
+That means it is responsible for maintaining the complete life cycle of an object.
+
+//== Notes on bean configuration in xml file
+******** For getter and setter injection **********
+There are three ways we can declare a bean in xml
+1. first way
+<bean class="fully qualified name of java class" name="name of class object">
+//Under property tag we have to define class properties
+	<property name="studentId">
+		<value>101</value>
+	</property>
+</bean>
+
+2. second way:- in this way we remove value tag and declare values inside property tag
+Example:-
+
+	<bean class="com.spring.core.Student" name="student1">
+		<property name="studentId" value="102" />
+
+		<property name="studentName" value="Vrun" />
+
+		<property name="studentAddress" value="Lucknow" />
+
+	</bean>
+
+3. third way:- in this way we remove even the property tag and declare all the class properties and values 
+inside the bean tag. This can be acheived only with the help of 'p' schema of spring.
+Exmaple:-
+<!-- This is our bean configuration for setter injection using 'p' schema  -->
+	<bean class="com.spring.core.Student" name="student"
+	 p:studentId="101" 
+	 p:studentName="Arun"
+	 p:studentAddress="Noida"
+	 />
+
+//========== How to inject collection types List , Set , Map and Properties in spring
