@@ -15,7 +15,11 @@ xsi:schemaLocation="
 
 
 <!-- This is our bean configuration for setter injection using 'p' schema  -->
-	<bean class="com.spring.autowire.Employee" name="employee" autowire="byName"/>
+	<!-- autowire="byName" :: used for searching file by name *condition:-object variable name must be same as it is in declared dependant class -->
+	<!-- autowire="byType" -->
+	<!-- autowire="constructer" -->
+	
+	<bean class="com.spring.autowire.Employee" name="employee"  autowire="byType"/>
 	<bean class="com.spring.autowire.Address" name="address" p:street="Sector 62" p:city="NOida"/>
 	
 </beans>
